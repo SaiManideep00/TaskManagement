@@ -6,6 +6,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TaskServiceImpl implements TaskService{
     private TaskRepository taskRepository;
@@ -18,5 +20,10 @@ public class TaskServiceImpl implements TaskService{
         System.out.println("Date is"+task.getDueDate());
 
         return new ResponseEntity<>(taskRepository.save(task), HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<List<Task>> getAllTasks() {
+        return new ResponseEntity<>(taskRepository.findAll(),HttpStatus.OK);
     }
 }
