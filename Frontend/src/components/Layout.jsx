@@ -1,14 +1,14 @@
 import React from "react";
 import Header from "./Header";
-import Body from "./Body";
+import { Outlet } from "react-router-dom";
 
-function Home() {
+function Layout() {
   return (
     <div>
       <Header />
-      <Body />
+      <Outlet />
     </div>
   );
 }
 
-export default Home;
+export default Layout;

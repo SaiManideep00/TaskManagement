@@ -1,12 +1,9 @@
 function Task() {
   return (
     <div>
-      <form>
-        <div>
-          <h1>Create a new task</h1>
-          <label htmlFor="task">Name</label>
-          <input type="text" placeholder="Enter task" />
-        </div>
+      <form className="p-4">
+        <label className="p-4 m-4">Task Name</label>
+        <input type="text" className=" border-2" />
       </form>
     </div>
   );
